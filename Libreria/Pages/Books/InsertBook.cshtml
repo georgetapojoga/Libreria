@@ -1,0 +1,46 @@
+﻿@page
+@model Libreria.Pages.Books.InsertBookModel
+@{
+    ViewData["Title"] = "InsertBook";
+}
+
+
+
+<div class="container">
+    <h1>INSERISCI UN LIBRO</h1>
+    <form method="post">
+
+        <div class="form-group">
+
+            <label asp-for="Input.Titolo"></label>
+            <input class="form-control" asp-for="Input.Titolo" />
+            <span class="text-danger" asp-validation-for="Input.Titolo"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Input.Autore"></label>
+            <input class="form-control" asp-for="Input.Autore" />
+            <span class="text-danger" asp-validation-for="Input.Autore"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Input.DataAcquisto"></label>
+            <input class="form-control" asp-for="Input.DataAcquisto" />
+            <span class="text-danger" asp-validation-for="Input.DataAcquisto"></span>
+        </div>
+
+        <div class="form-check">
+            <input asp-for="Input.Finito">
+            <label asp-for="Input.Finito">Finito</label>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Salva</button>
+
+    </form>
+</div>
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
+

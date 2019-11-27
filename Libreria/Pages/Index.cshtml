@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1 style="text-align: center"><strong>LIBRI NELLA MIA BIBLIOTECA</strong></h1>
+    <table class="table">
+        <tr>
+            <td><strong>Copertina</strong></td>
+            <td><strong>Titolo</strong></td>
+            <td><strong>Autore</strong></td>
+            <td><strong>Data di Acquisto</strong></td>
+            <td><strong>Finito</strong></td>
+        </tr>
+
+        @foreach (var p in Model.Books)
+        {
+    <tr>
+        <td>@p.Copertina</td>
+        <td>@p.Titolo</td>
+        <td>@p.Autore</td>
+        <td>@p.DataAcquisto</td>
+        <td>@p.Finito</td>
+
+    </tr>
+        }
+
+
+    </table>
+
+@section Scripts
+{
+    <script type="text/javascript">
+
+    </script>
+
+}
